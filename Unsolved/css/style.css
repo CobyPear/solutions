@@ -18,11 +18,16 @@ h1 {
 
 h2 {
     font-size: 24px;
+}
+
+.container {
     margin: 0 auto;
     width: 1024px;
 }
 
-#main-bio, #contact-info, #bio-image {
+#main-bio,
+#contact-info,
+#bio-image {
     float: left
 }
 
@@ -30,13 +35,14 @@ h2 {
     width: 70%;
 }
 
-#bio-image {
-    width: 200px;
-}
-
 #contact-info {
     width: 30%;
+}
 
+#bio-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
 }
 
 a {
