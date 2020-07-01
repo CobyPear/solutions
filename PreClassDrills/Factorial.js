@@ -12,25 +12,73 @@
     Explanation: 3 * 2 * 1 = 6
 --------------------------------------------------------------------------
 Algorithm
-    1) take the input and create a set of numbers that includes all numbers below it above 0
+    1) create a dataset with numbers between the input and 1, inclusive of both
+        a) count down by 1 and add each number to the dataset
     2) multiply the input by the set of numbers created
     3) return the product
 
   */
 
-  function factorial(num) {
 
-    if (num === 0 || num === 1) {
-        return 1;
-    }
+  const factorial = (num) => {
 
-    for (let i = num -1; i >= 1; i--) {
+      // 1st iteration
+        // push 4 into nums array
+    // 2nd interation 
+        // push 4 - 1 into nums array
 
-        num *= i;
-    }
+        //create a for loop and count down starting from num
+      for (let i = num - 1; i >= 1; i--) {
+            // multiply num by i
+            // 1st iteration 
+                // num * i (4*3)
 
-    return num;
+            num *= i
+      };
 
-  }
+      return num;
 
-  console.log(factorial(3));
+  };
+
+console.log(factorial(4))
+
+//   function factorial(num) {
+
+//     if (num === 0 || num === 1) {
+//         return 1;
+//     }
+
+//     for (let i = num -1; i >= 1; i--) {
+
+//         num *= i;
+//     }
+
+//     return num;
+
+//   }
+
+//   console.log(factorial(0));
+
+
+
+// Andrew's solution
+
+// function findFactorial(x){
+//     // store an empty array to push integers less than x and greater than zero into
+//     var factorialArray = [];
+//     // create for loop to start at x, go till it hits 1, and decrements down to that one
+//     for (i = x; i > 0; i--){
+//     // create a variable to store value at the current index of the for loop
+//     let currentNum = [i];
+//     // push the current number into the factorial array
+//     factorialArray.push(currentNum);
+//     }
+//     console.log(“Here’s the array: ” + factorialArray)
+//     // a variable will hold the reduced array, after multiplying them
+//     factorialResult = factorialArray.reduce(function(a, b) {
+//     return (a * b);
+// })
+// console.log(factorialResult)
+// }
+// x = 4
+// findFactorial(x)
