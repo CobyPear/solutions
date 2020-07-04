@@ -1,0 +1,15 @@
+div {
+   position: absolute;
+   top: 50%;
+   right: 50%;
+}
+
+#clock { 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: blueviolet;
+    color: white;
+    height: auto;
+    width: auto;
+    font-size: 2em;
+    
+}
