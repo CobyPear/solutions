@@ -23,22 +23,22 @@ Algorithm
 
 diffProdSum = (n) => {
     var str = n.toString();
-    var arr = [];
-    let prod;
+    let prod = 1;
     let sum = 0;
 
     for (let i = 0; i < str.length; i++) {
-        arr.push(+str.charAt(i))
-        sum += arr[i];
-        prod = arr.reduce((prod, num) => prod * num, 1)
+
+        sum += parseInt(str[i]);
+        prod *= str[i]
 
     };
 
-    console.log(prod);
-    console.log(sum);
+    // console.log(prod);
+    // console.log(sum);
 
     return prod - sum;
 
 }
 
 console.log(diffProdSum(234))
+console.log(diffProdSum(4421))
