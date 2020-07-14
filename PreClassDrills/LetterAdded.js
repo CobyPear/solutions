@@ -18,14 +18,12 @@
 
 
 const letterAdded = (s, t) => {
-    let result;
 
     for (let i = 0; i < t.length; i++) {
 
         if (!s.includes(t[i])) {
-            return result = t.split("").splice(i,1).join("");
+            return t.split("").splice(i,1).join("");
         };
-
     };
 };
 
