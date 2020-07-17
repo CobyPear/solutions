@@ -28,17 +28,25 @@
   2) when the number becomes 0, return the operation count
 */
 
+// keep track of the number of operations
 let opCount = 0;
 
 function opToZero(num) {
 
+    // if the number is even and positive...
     if (num % 2 === 0 && num > 0) {
+        // increase operations count by one
         opCount++;
+        // call the function again with the number passed in /2
         return opToZero(num/2);
     } else if (num % 2 === 1 && num > 0) {
+        // increase operations count by one
         opCount++;
+        // call the function again with the number passed in -1
         return opToZero(num-1);
+        // when the number is 0
     } else {
+        // return the opcount
         return opCount;
     };
 };
