@@ -41,16 +41,17 @@ const twoArrays = (arr1, arr2) => {
 
 
     // returns an array with values found in array2 but not array1
-    const unique = [...new Set(arr2)].filter(x => !arr1.includes(x));
+    // const unique = [...new Set(arr2)].filter(x => !arr1.includes(x));
 
-    // let unique = [];
+    let unique = [];
     const charCount = {};
 
     for (let i = 0; i < arr2.length; i++) {
         // also returns an array with values found in array2 but not array1
-        // if (!arr1.includes(arr2[i])) {
-        //     unique.push(arr2[i])
-        // }
+        if ((!arr1.includes(arr2[i])
+            && (!unique.includes(arr2[i])))) {
+            unique.push(arr2[i])
+        }
 
         //     // this only works for the test case provided. if there was a char that appeared twice and another that appeared 3x, both would be added to the set.
         //     // if (arr2.indexOf(arr2[i]) !== arr2.lastIndexOf(arr2[i])) {
@@ -109,4 +110,4 @@ const twoArrays = (arr1, arr2) => {
 }
 
 console.log(twoArrays(['a', 'b', 'c', 'e', 'j', 'f'], ['a', 'a', 'f', 'b', 'g', 'r', 'e', 'f', 't']))
-console.log(twoArrays(['a', 'b', 'c', 'e', 'j', 'f'], ['a', 'a', 'f', 'b', 'g', 'r', 'e', 'f', 't', 'f', 't' ,'t']))
+console.log(twoArrays(['a', 'b', 'c', 'e', 'j', 'f'], ['a', 'a', 'f', 'b', 'g', 'r', 'e', 'f', 't', 'f', 't', 't']))
