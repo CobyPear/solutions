@@ -64,6 +64,8 @@ const isValid = s => {
         }
 
     }
+    if (openingStack.length) return false
+    
     return true
 
 }
