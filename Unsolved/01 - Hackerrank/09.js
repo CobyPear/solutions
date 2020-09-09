@@ -18,28 +18,29 @@ Algorithm
 const autoRounder = grades => {
 
     // recursive helper function for finding closest multiple of 5
-    const findColsestMultipleOf5 = num => {
+    const findClosestMultipleOf5 = num => {
         // if the number does not end i 5 or 0,
         if (num % 5 === 0) {
             return num;
         } else {
-            return findColsestMultipleOf5(num + 1);
+            return findClosestMultipleOf5(num + 1);
         }
-    };
-    // findClosestMultiple(73);
-    console.log(findColsestMultipleOf5(73))
+    }
+
     // set new array to hold results
     const result = [];
     // iterate around the grades array
     for (let i = 0; i < grades.length; i++) { 
+
         if (grades[i] < 35) {
-            result.push(grades[i])
-        } else if (findColsestMultipleOf5(grades[i]) - grades[i] < 3) {
-             result.push(findColsestMultipleOf5(grades[i]))
+            result.push(grades[i]);
+
+        } else if (findClosestMultipleOf5(grades[i]) - grades[i] < 3) {
+             result.push(findClosestMultipleOf5(grades[i]));
+             
         } else {
-            result.push(grades[i])
+            result.push(grades[i]);
         }
-        
     }
     return result;
 }
