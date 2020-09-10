@@ -34,14 +34,12 @@ smush them back into 1 array by pushing into result from x, then y, then x etc.
 
 const shuffleArray = (nums, n) => {
     const xArray = nums.splice(0, n);
-    const yArray = nums.splice(0, n);
     const result = [];
 
     for (let i = 0; i < n; i++) {
-        result.push(xArray[i]);
-        result.push(yArray[i]);
+        result.push(xArray[i], nums[i]);
     }
-    console.log(result);
+
     return result;
 }
 
