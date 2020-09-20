@@ -18,19 +18,16 @@ const birthday = (s, d, m) => {
     let finalCounter = 0;
     let tempArray = [];
 
-    if (s.length === 1 && d === s[0]) return 1
-
-
     for (let i = 0; i < s.length; i++) {
         tempArray.push(s[i])
 
         if (tempArray.length === m) {
 
             if (tempArray.reduce((acc, cur) => acc + cur) === d) {
-                console.log("ding")
                 finalCounter++;
                 i -= m - 1;
                 tempArray = [];
+
             } else {
                 tempArray = [];
                 i -= m - 1;
