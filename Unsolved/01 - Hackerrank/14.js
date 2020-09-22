@@ -12,7 +12,7 @@ return results dataset
 
 const divisibleSumPairs = (n, k, ar) => {
 
-    let pairs = [];
+    let count = 0;
 
     for (let i = 0; i < n; i++) {
 
@@ -21,11 +21,11 @@ const divisibleSumPairs = (n, k, ar) => {
             const sum = ar[i] + ar[j]
 
             if (sum % k === 0) 
-                pairs.push([ar[i], ar[j]])
+                count++
         }
     }
 
-    return pairs.length
+    return count
 }
 
 console.log(divisibleSumPairs(6, 3, [1,3,2,6,1,2]))
